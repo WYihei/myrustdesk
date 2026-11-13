@@ -30,10 +30,11 @@ def main():
     if stage.exists():
         raise SystemExit(f'{stage} already exists. Move it aside before packaging again.')
     shutil.copytree(source, stage)
-    (stage / 'rustdesk.exe').rename(stage / 'carouseldesk.exe')
+    # The installer copies this directory and launches INTERNAL_NAME.exe.
+    (stage / 'rustdesk.exe').rename(stage / 'CarouselRemote.exe')
     packer = ROOT / 'libs/portable'
     subprocess.run([sys.executable, str(packer / 'generate.py'), '-f', str(stage),
-                    '-o', str(packer), '-e', str(stage / 'carouseldesk.exe')],
+                    '-o', str(packer), '-e', str(stage / 'CarouselRemote.exe')],
                    cwd=ROOT, check=True)
     output = ROOT / 'dist/carouseldesk.exe'
     shutil.copy2(ROOT / 'target/release/rustdesk-portable-packer.exe', output)

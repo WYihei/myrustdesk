@@ -187,7 +187,7 @@ jobs:
 
       - name: Verify Windows executable icons
         shell: pwsh
-        run: '& ./res/carousel/verify_windows_icon.ps1 -Executable @("dist/carouseldesk.exe", "dist/carousel-payload/carouseldesk.exe")'
+        run: '& ./res/carousel/verify_windows_icon.ps1 -Executable @("dist/carouseldesk.exe", "dist/carousel-payload/CarouselRemote.exe")'
 
       - name: Upload Carousel EXE
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a

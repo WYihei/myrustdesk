@@ -45,10 +45,10 @@ python res/carousel/package_windows.py --check
 python build.py --portable --flutter --skip-portable-pack --hwcodec --vram
 python -m pip install -r libs/portable/requirements.txt
 python res/carousel/package_windows.py
-./res/carousel/verify_windows_icon.ps1 -Executable @('dist/carouseldesk.exe', 'dist/carousel-payload/carouseldesk.exe')
+./res/carousel/verify_windows_icon.ps1 -Executable @('dist/carouseldesk.exe', 'dist/carousel-payload/CarouselRemote.exe')
 ```
 
-单 EXE 产物位于 `dist/carouseldesk.exe`。打包器将 Flutter 输出复制到 `dist/carousel-payload`，内部主程序名为 `carouseldesk.exe`。
+单 EXE 产物位于 `dist/carouseldesk.exe`。打包器将 Flutter 输出复制到 `dist/carousel-payload`，内部主程序名为 `CarouselRemote.exe`，与安装后的服务及快捷方式目标一致；外层分发文件继续叫 `carouseldesk.exe`。
 再次打包前将旧的 `dist/carousel-payload` 移走；脚本不会自动删除已有目录。
 单 EXE 内含资源和依赖，启动时解压到本地缓存。
 发布前用干净 Windows 机器验证主动连接、被控连接、安装后的服务、主题和快捷方式图标。
