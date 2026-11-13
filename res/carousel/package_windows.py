@@ -37,7 +37,7 @@ def main():
                    cwd=ROOT, check=True)
     output = ROOT / 'dist/旋转木马远程桌面.exe'
     shutil.copy2(ROOT / 'target/release/rustdesk-portable-packer.exe', output)
-    print(f'Created {output}')
+    print('Created Carousel Windows EXE in dist/.')
 
 
 if __name__ == '__main__':
