@@ -2632,7 +2632,7 @@ class _AboutState extends State<_About> {
                     style: linkStyle,
                   ).marginSymmetric(vertical: 4.0)),
               Container(
-                decoration: const BoxDecoration(color: Color(0xFF2c8cff)),
+                decoration: const BoxDecoration(color: MyTheme.onAccent),
                 padding:
                     const EdgeInsets.symmetric(vertical: 24, horizontal: 8),
                 child: SelectionArea(
@@ -2647,9 +2647,7 @@ class _AboutState extends State<_About> {
                             style: const TextStyle(color: Colors.white),
                           ),
                           Text(
-                            isWindows && appName == 'CarouselRemote'
-                                ? '忙的团团转已经麻木的牛马专用的远程桌面软件'
-                                : translate('Slogan_tip'),
+                            translate('Slogan_tip'),
                             style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 color: Colors.white),

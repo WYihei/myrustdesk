@@ -1,6 +1,6 @@
 use hbb_common::config;
 
-pub const DISPLAY_NAME: &str = "旋转木马远程桌面";
+pub const DISPLAY_NAME: &str = "carouseldesk";
 pub const INTERNAL_NAME: &str = "CarouselRemote";
 
 pub fn display_name() -> String {

@@ -28,9 +28,9 @@ native-windows-gui = {version = "1.0", default-features = false, features = ["an
 
 [package.metadata.winres]
 LegalCopyright = "Copyright © 2026 Purslane Tech Pte. Ltd. All rights reserved."
-ProductName = "旋转木马远程桌面"
-OriginalFilename = "旋转木马远程桌面.exe"
-FileDescription = "旋转木马远程桌面"
+ProductName = "carouseldesk"
+OriginalFilename = "carouseldesk.exe"
+FileDescription = "carouseldesk"
 #ProductVersion = ""
 
 [target.'cfg(target_os="windows")'.build-dependencies]
