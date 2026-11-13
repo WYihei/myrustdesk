@@ -3061,7 +3061,7 @@ int versionCmp(String v1, String v2) {
 }
 
 String getWindowName({WindowType? overrideType}) {
-  final name = bind.mainGetAppNameSync();
+  final name = appDisplayName;
   switch (overrideType ?? kWindowType) {
     case WindowType.Main:
       return name;
@@ -4223,6 +4223,10 @@ List<String> getPrinterNames() {
     return [];
   }
 }
+
+String get appDisplayName => isWindows && appName == 'CarouselRemote'
+    ? '旋转木马远程桌面'
+    : appName;
 
 String _appName = '';
 String get appName {

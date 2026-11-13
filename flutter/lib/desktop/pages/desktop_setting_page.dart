@@ -2647,7 +2647,9 @@ class _AboutState extends State<_About> {
                             style: const TextStyle(color: Colors.white),
                           ),
                           Text(
-                            translate('Slogan_tip'),
+                            isWindows && appName == 'CarouselRemote'
+                                ? '忙的团团转已经麻木的牛马专用的远程桌面软件'
+                                : translate('Slogan_tip'),
                             style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 color: Colors.white),

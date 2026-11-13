@@ -60,3 +60,11 @@ flutter/web/
 /third_party/libdrmtap/
 # Local git worktrees
 .worktrees/
+
+# Carousel branding assets are required in fork builds.
+!/res/carousel/*.png
+!/flutter/assets/icon.png
+!/flutter/assets/logo.png
+!/flutter/assets/logo_light.png
+!/flutter/assets/logo_dark.png
+/dist/
